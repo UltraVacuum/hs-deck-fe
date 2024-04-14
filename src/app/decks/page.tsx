@@ -1,13 +1,9 @@
 import type { Metadata } from 'next'
 import { BasicLayout } from "@/components/local/layout";
-import ColorFlow from './components/flow';
 
 export async function generateMetadata(): Promise<Metadata> {
-    // read route params
-    // fetch data
-    // optionally access and extend (rather than replace) parent metadata
-    const title = `最新流行卡组.`
-    const description = `查看天梯最新卡组信息，找到适合你的上分卡组！`
+    const title = `发现炉石传说最新卡组套牌信息`
+    const description = `发现炉石传说最新标准、狂野、乱斗、竞技场卡组，帮助快速天梯上分。`
     return {
         title,
         openGraph: {
@@ -22,10 +18,10 @@ export async function generateMetadata(): Promise<Metadata> {
     }
 }
 
-export default function Page() {
+export default async function Page() {
     return (
         <BasicLayout>
-            <ColorFlow api={`/api/explore`} />
+            马上上线...
         </BasicLayout>
     )
 }
