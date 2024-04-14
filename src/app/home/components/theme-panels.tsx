@@ -14,7 +14,7 @@ const Layout = ({ children }: any) => {
     return (
         <ContentLayout>
             <h2 className="text-4xl text-center font-mono font-extrabold py-8">
-                Recent Collects.
+                最新标准卡组.
             </h2>
             {children}
         </ContentLayout>

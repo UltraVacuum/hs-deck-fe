@@ -1,15 +1,42 @@
 'use client';
+import { useEffect, useState } from "react";
 import { Loader, ServerCrash } from "lucide-react"
+import { UserContext } from '@/context'
+import { createClient } from "@/supabase/client";
 
 export const ContentLayout = ({ children }: {
     children: React.ReactNode
 }) => {
+    const [user, setUser]: any = useState(null)
+    const [fetchAuth, setFetchAuth] = useState(false)
+
+    useEffect(() => {
+        console.log('update effect', fetchAuth)
+        const initUser = async () => {
+            const supabase = createClient();
+            const {
+                data: { user: cu },
+            } = await supabase.auth.getUser();
+            if (cu) setUser(cu)
+        }
+        if (!fetchAuth) {
+            initUser()
+            setFetchAuth(true)
+        }
+    }, [fetchAuth])
+
     return (
-        <div className="container min-h-80 py-8">
-            <div className="container">
-                {children}
+        <UserContext.Provider value={{
+            user,
+            setUser
+        }}>
+            <div className="container min-h-80 py-8">
+                <div className="container">
+
+                    {children}
+                </div>
             </div>
-        </div>
+        </UserContext.Provider >
     )
 }
 

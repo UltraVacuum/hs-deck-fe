@@ -4,7 +4,6 @@ import Navigation from "@/components/local/navigation";
 import { ErrorView } from "@/components/local/layout";
 
 import Hero from './components/hero'
-import DyHero from './components/dy-hero';
 import SubPanels from './components/sub-panels';
 import ColorSets from './components/color-sets';
 import ThemePanels from './components/theme-panels';
@@ -15,7 +14,7 @@ const getData = async () => {
     const skip = pg * ps
     const supabase = createClient()
     return await supabase
-        .from('color_sets')
+        .from('cards')
         .select('*')
         .range(skip + 1, skip + ps)
 }
@@ -30,18 +29,14 @@ export default async function Home() {
     )
 
     return (
-        <>
-            <div className="relative">
-                <Hero>
-                    <DyHero colorSets={data} />
-                </Hero>
-                <Navigation />
-                <ThemePanels />
-                <div className="min-h-screen md:px-24 px-8">
-                    <ColorSets colorSets={data} />
-                    <SubPanels />
-                </div>
+        <div className="relative">
+            <Navigation />
+            <Hero />
+            <ThemePanels />
+            <div className="min-h-screen md:px-24 px-8">
+                <ColorSets colorSets={data} />
+                <SubPanels />
             </div>
-        </>
+        </div>
     )
 }

@@ -9,13 +9,15 @@ export default function ColorSets({ colorSets }: any) {
         <ContentLayout>
             <div className="z-10 w-full mb-8">
                 <p className="text-4xl text-center font-mono font-extrabold">
-                    Find patterns in Datasets.
+                    狂野卡组收集中....
                 </p>
             </div>
             <div className="flex flex-wrap mx-auto">
                 {
                     colorSets.map((color: any, idx: number) => {
-                        return <ColorItemBasic color={color} key={idx} />
+                        return <ColorItemBasic
+                            color={color}
+                            key={idx} />
                     })
                 }
             </div>

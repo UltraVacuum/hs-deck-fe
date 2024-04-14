@@ -1,52 +1,25 @@
 import type { Metadata } from 'next'
 
 export const keywords = [
-    'color',
-    'colors',
-    'color scheme',
-    'color stack',
-    'colors stack',
-    'color customize',
-    'color design',
-    'design color',
-    'stack color',
-    'stack colors',
-    'scheme color',
-    'color schemes',
-    'color theme',
-    'theme color',
-    'color themes',
-    'theme colors',
-    'color panels',
-    'color palette',
-    'color palettes',
-    'color combinations',
-    'color wheel',
-    'color names',
-    'color sets',
-    'palettes',
-    'hex color palettes',
-    'rgb color palettes',
-    'hsv color palettes',
-    'hsl color palettes',
-    'pastel color palette',
-    'web color schemes',
-    'random color palette generator',
-    'color schemes generator',
-    'ui color palette generator',
-    'pretty colors',
-    'vintage color',
-    'extract color palette from image',
-    'color palette from image'
+    'heart stone',
+    '炉石传说',
+    '暴雪炉石传说',
+    '炉石卡组',
+    '炉石标准卡组',
+    '炉石狂野卡组',
+    '炉石乱斗卡组',
+    '炉石竞技场卡组',
+    '炉石套牌',
+    '炉石资讯',
 ].join(',')
 
-export const description = 'Customize stack the page color scheme. Build your color sets to help your color design stand out.'
+export const description = '在炉石传说卡组网站，探索最新的卡牌组合和战术策略！从竞技场到标准模式，我们提供多种强大的卡组，助你在游戏中脱颖而出。浏览数百种卡组，了解每张卡牌的最佳用法，并与全球玩家分享你的战术见解。立即加入我们，成为顶尖玩家'
 
 export const SeoMeta: Metadata = {
-    metadataBase: new URL('https://color-stack.top'),
+    metadataBase: new URL('https://hstopdecks.com'),
     title: {
-        template: 'Color Stack | %s',
-        default: 'Color Stack | Home', // a default is required when creating a template
+        template: 'HsTopDecks | %s',
+        default: 'HsTopDecks | Home', // a default is required when creating a template
     },
     keywords,
     description,

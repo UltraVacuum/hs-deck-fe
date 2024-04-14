@@ -63,7 +63,7 @@ type THRESHOLD = {
 const filterFunc = {
     [FILTER_WHITE]: filterWhite,
     [FILTER_BLACK]: filterBlack,
-    [FILTER_GREY]: filterBlack
+    [FILTER_GREY]: filterGray
 }
 
 const initThreshold = {
@@ -268,7 +268,6 @@ export default function Main({ eid }: { eid: string }) {
                             })
                         }
                     </ToggleGroup>
-
                 </div>
                 <div className="flex items-center px-2 mb-2 space-x-4">
                     <p className="flex-none">

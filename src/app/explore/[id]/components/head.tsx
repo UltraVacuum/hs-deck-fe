@@ -53,5 +53,6 @@ export default function PageHead({ item }: { item: any }) {
                     </p>
                 </div>
             </div>
-        </div>)
+        </div>
+    )
 }

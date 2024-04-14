@@ -23,7 +23,7 @@ const ThemeBlock = ({ theme }: any) => {
                             className="flex-none w-8 h-8"
                             key={i}
                             style={{
-                                background: `${c.hex}`
+                                background: `https://art.hearthstonejson.com/v1/256x/${c.id}.jpg`
                             }}
                         ></div>
                     )

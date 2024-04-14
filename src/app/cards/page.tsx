@@ -1,14 +1,10 @@
 import type { Metadata } from 'next'
 import { BasicLayout } from "@/components/local/layout";
-import Content from './sections/content'
+import Flow from './components/flow'
 
 export async function generateMetadata(): Promise<Metadata> {
-  // read route params
-  // fetch data
-  // optionally access and extend (rather than replace) parent metadata
-  const title = `About`
-  const description = `Get to know more about Color Stack.`
-
+  const title = `Color sets Explore.`
+  const description = `Explore popular color sets on color stack.`
   return {
     title,
     openGraph: {
@@ -23,10 +19,10 @@ export async function generateMetadata(): Promise<Metadata> {
   }
 }
 
-export default function About() {
+export default async function Page() {
   return (
     <BasicLayout>
-      <Content />
+      <Flow />
     </BasicLayout>
   )
 }

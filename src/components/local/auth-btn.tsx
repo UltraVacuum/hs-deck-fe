@@ -36,17 +36,17 @@ export default async function AuthButton() {
                     }} />
                 </DropdownMenuTrigger>
                 <DropdownMenuContent>
-                    <DropdownMenuLabel>My Account</DropdownMenuLabel>
+                    <DropdownMenuLabel>我的账户</DropdownMenuLabel>
                     <DropdownMenuSeparator />
                     <DropdownMenuItem>
-                        <Link href="/user/profile">Profile</Link>
+                        <Link href="/user/profile">个人资料</Link>
                     </DropdownMenuItem>
                     <DropdownMenuItem>
                         <form action={signOut}>
                             <button className="rounded-md 
                     no-underline bg-btn-background 
                     hover:bg-btn-background-hover">
-                                Logout
+                                登出
                             </button>
                         </form>
                     </DropdownMenuItem>
@@ -60,7 +60,7 @@ export default async function AuthButton() {
                 no-underline bg-btn-background 
                 hover:bg-btn-background-hover"
         >
-            Login
+            登录
         </Link>
     );
 }

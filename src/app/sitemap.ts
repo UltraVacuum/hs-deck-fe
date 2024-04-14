@@ -16,16 +16,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
             priority: 0.2,
         },
         {
-            url: `${siteUrl}/color-sets`,
+            url: `${siteUrl}/cards`,
             lastModified: new Date(),
             changeFrequency: 'daily',
-            priority: 0.6,
+            priority: 0.3,
         },
         {
-            url: `${siteUrl}/about`,
+            url: `${siteUrl}/decks`,
             lastModified: new Date(),
-            changeFrequency: 'monthly',
-            priority: 1,
+            changeFrequency: 'daily',
+            priority: 0.4,
         }
     ]
 }

@@ -10,17 +10,16 @@ import AuthButton from '@/components/local/auth-btn';
 
 const menus = [{
     path: '/explore',
-    title: 'Explore',
+    title: '最新资讯',
 }, {
-    path: '/color-sets',
-    title: 'Colorsets',
+    path: '/cards',
+    title: '卡牌',
 }, {
-    path: process.env.EXTENSION_URL,
-    title: 'Extension',
-    target: '_blank'
+    path: '/decks',
+    title: '卡组',
 }, {
     path: '/about',
-    title: 'About',
+    title: '关于',
 }]
 
 const MobileNav = () => {
@@ -43,10 +42,7 @@ const MobileNav = () => {
                                 className='flex items-center mr-1'
                                 key={i}
                             >
-                                <Link
-                                    href={`${m.path}`}
-                                    target={`${m.target || ''}`}
-                                >
+                                <Link href={`${m.path}`} >
                                     {`${m.title}`}
                                 </Link>
                             </li>
@@ -82,7 +78,6 @@ const HeadMenus = () => {
                             <a
                                 className='hover:text-sky-500 dark:hover:text-sky-400'
                                 href={`${m.path}`}
-                                target={`${m.target || ''}`}
                                 key={i}
                             >
                                 {`${m.title}`}
@@ -109,14 +104,14 @@ export default function Navigation() {
                             href='/'
                         >
                             <Image
-                                src="/icons/128x128.png"
-                                alt="Vercel Logo"
+                                src="/icons/logo.png"
+                                alt="HsTopDecks Logo"
                                 className="dark:invert"
                                 width={24}
                                 height={24}
                                 priority
                             />
-                            <span className='sr-only'>Color Stack</span>
+                            <span className='sr-only'>HsTopDecks</span>
                         </Link>
                         <div className='relative'>
                             <Link
@@ -124,7 +119,7 @@ export default function Navigation() {
                                 type='button'
                                 href="/"
                             >
-                                Color Stack
+                                HsTopDecks
                             </Link>
                         </div>
 
@@ -139,7 +134,7 @@ export default function Navigation() {
                                     id='headlessui-listbox-label-:Rpkcr6:'
                                     data-headlessui-state=''
                                 >
-                                    Theme
+                                    Cards
                                 </label>
                                 <button
                                     type='button'

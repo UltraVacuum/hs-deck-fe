@@ -4,7 +4,6 @@ import { Inter } from 'next/font/google'
 import { Toaster } from "@/components/ui/toaster"
 import Footer from '@/components/local/footer'
 import { SeoMeta } from '@/components/local/seo'
-import { keywords, description } from '@/components/local/seo'
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from "@vercel/speed-insights/next"
 
