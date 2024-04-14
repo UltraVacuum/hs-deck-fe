@@ -45,4 +45,8 @@ export const SeoMeta: Metadata = {
             url: '/favicon/apple-touch-icon.png',
         },
     },
+    other: {
+        'baidu-site-verification': 'codeva-NIe90b7b9C'
+    }
+    // <meta name="baidu-site-verification" content="codeva-NIe90b7b9C" />
 }
