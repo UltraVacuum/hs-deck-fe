@@ -1,0 +1,20 @@
+{
+  "name": "hs-crawl-scripts",
+  "version": "1.0.0",
+  "description": "Hearthstone content crawl scripts",
+  "main": "index.js",
+  "scripts": {
+    "crawl:decks": "node crawl-decks.js",
+    "crawl:news": "node crawl-news.js",
+    "crawl:updates": "node crawl-updates.js",
+    "crawl:all": "npm run crawl:decks && npm run crawl:news && npm run crawl:updates"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.39.6",
+    "axios": "^1.6.0",
+    "cheerio": "^1.0.0-rc.12"
+  },
+  "devDependencies": {
+    "node-cron": "^3.0.3"
+  }
+}

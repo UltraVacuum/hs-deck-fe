@@ -1,0 +1,36 @@
+
+> hs-deck-fe@0.1.0 dev
+> next dev
+
+   ▲ Next.js 14.0.4
+   - Local:        http://localhost:3000
+   - Environments: .env.local, .env.development
+
+   Downloading swc package @next/swc-darwin-arm64...
+ ✓ Ready in 18s
+ ✓ Compiled /api/decks in 318ms (144 modules)
+ ✓ Compiled /api/news in 63ms (146 modules)
+ ✓ Compiled /api/updates in 51ms (148 modules)
+ ✓ Compiled in 15ms
+ ✓ Compiled /api/decks in 45ms (144 modules)
+ ✓ Compiled /api/news in 42ms (144 modules)
+ ✓ Compiled in 62ms (144 modules)
+ ✓ Compiled /api/updates in 68ms (146 modules)
+ ✓ Compiled in 19ms
+ ✓ Compiled /api/news in 47ms (144 modules)
+ ✓ Compiled /api/updates in 27ms (146 modules)
+ ✓ Compiled /api/decks in 49ms (148 modules)
+ ✓ Compiled in 17ms
+ ✓ Compiled /api/decks in 90ms (144 modules)
+ ✓ Compiled in 496ms (184 modules)
+ ✓ Compiled in 71ms (184 modules)
+ ✓ Compiled in 51ms (184 modules)
+ ✓ Compiled /api/cron/decks in 54ms (22 modules)
+ ✓ Compiled in 30ms (22 modules)
+ ✓ Compiled in 31ms (22 modules)
+   Reload env: .env.local
+ ✓ Compiled in 53ms (206 modules)
+ ✓ Compiled /api/decks in 169ms (144 modules)
+ ✓ Compiled /api/news in 33ms (146 modules)
+ ✓ Compiled /api/updates in 36ms (148 modules)
+[?25h
