@@ -1,9 +1,13 @@
 import HeroSection from './home/components/hero-section';
+import Navigation from '@/components/local/navigation';
 import Link from 'next/link';
 
 export default function Page() {
   return (
     <div className="relative bg-gray-50">
+      {/* Navigation */}
+      <Navigation />
+
       {/* Hero Section - 保留原始hero组件 */}
       <HeroSection />
 
