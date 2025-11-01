@@ -5,9 +5,9 @@
   "framework": "nextjs",
   "regions": ["iad1"],
   "env": {
-    "NEXT_PUBLIC_SUPABASE_URL": "@supabase_url",
-    "NEXT_PUBLIC_SUPABASE_ANON_KEY": "@supabase_anon_key",
-    "CRON_SECRET": "@cron_secret",
+    "NEXT_PUBLIC_SUPABASE_URL": "https://qforckccvciuocoxgcue.supabase.co",
+    "NEXT_PUBLIC_SUPABASE_ANON_KEY": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFmb3Jja2NjdmNpdW9jb3hnY3VlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTI5OTU5NzIsImV4cCI6MjAyODU3MTk3Mn0.lMoIPDNrVZtzBjKn6_60YoP57QrStKYhvfK6brzzFUQ",
+    "CRON_SECRET": "hs-cron-secret-d3112415",
     "NODE_ENV": "production",
     "NEXT_TELEMETRY_DISABLED": "1",
     "NODE_OPTIONS": "--max-old-space-size=4096"
