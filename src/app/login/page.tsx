@@ -1,8 +1,8 @@
 import Link from "next/link";
 import { ChevronLeft } from 'lucide-react';
 import { ContentLayout } from "@/components/local/layout";
-import GoogleSignIn from "./components/google-signin";
 import EmailSignIn from "./components/email-signin";
+import Navigation from '@/components/local/navigation';
 
 export default function Page({
     searchParams,
@@ -14,11 +14,13 @@ export default function Page({
 }) {
 
     return (
-        <ContentLayout>
-            <Link
+        <>
+            <Navigation />
+            <ContentLayout>
+                <Link
                 href="/"
-                className="py-2 rounded-md no-underline text-foreground 
-                            bg-btn-background hover:bg-btn-background-hover 
+                className="py-2 rounded-md no-underline text-foreground
+                            bg-btn-background hover:bg-btn-background-hover
                             flex items-center group text-sm"
             >
                 <ChevronLeft />
@@ -27,21 +29,23 @@ export default function Page({
             <div className="mt-8">
                 <div className="flex flex-col w-full mx-auto
                     px-8 sm:max-w-md justify-center gap-2">
-                    <div className="animate-in text-center 
+                    <div className="animate-in text-center
                         flex-1 flex flex-col w-full justify-center
                         gap-2 text-foreground space-y-4">
-                        <GoogleSignIn />
-                        <hr />
+                        <h2 className="text-2xl font-bold text-foreground mb-6">
+                            登录账号 | Sign In
+                        </h2>
                         <EmailSignIn />
                     </div>
                     {searchParams?.message && (
-                        <p className="mt-4 px-4 py-2 bg-foreground/10 
+                        <p className="mt-4 px-4 py-2 bg-foreground/10
                             text-foreground text-center">
                             {searchParams.message}
                         </p>
                     )}
+                    </div>
                 </div>
-            </div>
-        </ContentLayout>
+            </ContentLayout>
+        </>
     );
 }

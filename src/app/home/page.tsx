@@ -1,10 +1,12 @@
 import HeroSection from './components/hero-section';
 import Link from 'next/link';
+import Navigation from '@/components/local/navigation';
 
 export default function Home() {
 
   return (
     <div className="relative bg-gray-50">
+      <Navigation />
       {/* Hero Section - 保留原始hero组件 */}
       <HeroSection />
 

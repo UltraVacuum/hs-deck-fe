@@ -2,6 +2,7 @@
 
 import { useEffect } from 'react';
 import MetaDashboard from '@/components/hearthstone/meta/MetaDashboard';
+import Navigation from '@/components/local/navigation';
 
 export default function MetaPage() {
   useEffect(() => {
@@ -13,6 +14,7 @@ export default function MetaPage() {
   }, []);
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-900 via-purple-900 to-slate-900">
+      <Navigation />
       <div className="container mx-auto px-4 py-8">
         <div className="text-center mb-8">
           <h1 className="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-orange-500 mb-4">

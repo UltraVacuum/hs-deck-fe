@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { BasicLayout } from '@/components/local/layout';
 import Link from 'next/link';
 import { Search, Sparkles, Filter, Grid } from 'lucide-react';
+import Navigation from '@/components/local/navigation';
 
 // 简化的卡牌数据
 const mockCards = [
@@ -63,6 +64,7 @@ export async function generateMetadata(): Promise<Metadata> {
 export default function CardsPage() {
   return (
     <BasicLayout>
+      <Navigation />
       <div className="min-h-screen bg-gray-50">
         {/* Search Header */}
         <div className="bg-white border-b border-gray-200">
