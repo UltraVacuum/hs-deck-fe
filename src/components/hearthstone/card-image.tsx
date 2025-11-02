@@ -80,6 +80,7 @@ export function CardImage({
     backgroundSize: 'cover' as const,
     backgroundPosition: 'center' as const,
     backgroundRepeat: 'no-repeat' as const,
+    scale: '1.38' as const,
   };
 
   return (

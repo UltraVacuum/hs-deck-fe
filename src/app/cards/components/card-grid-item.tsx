@@ -124,11 +124,15 @@ export function CardGridItem({
       {/* Main card container with enhanced border */}
       <div className={cn(
         'relative bg-white rounded-lg overflow-hidden',
-        'border-2 transition-all duration-300',
+        'border-1 transition-all duration-300',
         rarityStyles.border,
         'shadow-lg hover:shadow-xl',
         rarityStyles.shadow
-      )}>
+      )}
+        style={{
+          background: `linear-gradient(to bottom, ${rarityStyles.bg})`
+        }}
+      >
         {/* Rarity glow effect */}
         <div className={cn(
           'absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300',
@@ -137,11 +141,11 @@ export function CardGridItem({
         )} />
 
         {/* Card image area */}
-        <div className="relative aspect-[1/1.618]">
+        <div className="relative aspect-[1/1.14] overflow-hidden">
           <CardImage
             cardId={id}
             cardName={name_zh}
-            imageUrl={imageUrls.orig || imageUrls.normal}
+            imageUrl={imageUrls.large || imageUrls.orig}
             size="large"
             className="w-full h-full"
             showLoading={false}
