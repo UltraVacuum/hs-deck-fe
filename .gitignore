@@ -46,3 +46,6 @@ tests
 docs
 logs
 .swc
+supabase/
+cards-data/
+scripts/

@@ -1,140 +1,172 @@
+import Link from 'next/link';
 import {
-    TwitterIcon, GithubIcon, FacebookIcon, DribbbleIcon,
+    GithubIcon,
+    TwitterIcon,
+    MailIcon,
+    Heart,
+    Sparkles,
+    Target,
+    BarChart3,
+    Layers
 } from 'lucide-react';
 
 export default function Footer() {
     return (
-        <footer className="relative bg-gray-50 pt-8 pb-6 lg:mt-20">
-            <div
-                className="bottom-auto top-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden -mt-20 h-20"
-                style={{ transform: 'translateZ(0px)' }}
-            >
-                <svg
-                    className="absolute bottom-0 overflow-hidden"
-                    xmlns="http://www.w3.org/2000/svg"
-                    preserveAspectRatio="none"
-                    version="1.1"
-                    viewBox="0 0 2560 100"
-                    x="0"
-                    y="0"
-                >
-                    <polygon
-                        className="text-zinc-100 fill-current opacity-50"
-                        points="2560 0 2560 100 0 100"
-                    ></polygon>
-                </svg>
-            </div>
-            <div className="container mx-auto px-8">
-                <div className="flex flex-wrap text-center lg:text-left">
-                    <div className="w-full lg:w-6/12 px-4">
-                        <h4 className="text-3xl font-semibold">Let&rsquo;s keep in touch!</h4>
-                        <h5 className="text-lg my-2 text-gray-400">
-                            Find us on any of these platforms, we respond 1-2 business days.
-                        </h5>
-                        <div className="flex mt-6 lg:mb-0 mb-6">
-                            <button
-                                className="bg-white text-blue-400 shadow-lg font-normal h-10 w-10 flex items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
-                                type="button"
+        <footer className="bg-gradient-to-br from-gray-900 via-slate-900 to-gray-900 text-white mt-20">
+            {/* Top decoration */}
+            <div className="w-full h-1 bg-gradient-to-r from-blue-500 via-purple-500 to-orange-500"></div>
+
+            <div className="container mx-auto px-4 py-12">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    {/* Brand Section */}
+                    <div className="lg:col-span-1">
+                        <div className="flex items-center mb-4">
+                            <div className="p-2 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg mr-3">
+                                <Sparkles className="w-6 h-6 text-white" />
+                            </div>
+                            <h3 className="text-xl font-bold">HsTopDecks</h3>
+                        </div>
+                        <p className="text-gray-300 mb-6 leading-relaxed">
+                            专业的炉石传说卡组发现平台，为玩家提供最新的卡组分析、元数据洞察和策略建议。
+                        </p>
+                        <div className="flex space-x-4">
+                            <a
+                                href="https://github.com"
+                                className="text-gray-400 hover:text-white transition-colors"
+                                target="_blank"
+                                rel="noopener noreferrer"
                             >
-                                <TwitterIcon />
-                            </button>
-                            <button
-                                className="bg-white text-blue-600 shadow-lg font-normal h-10 w-10 flex items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
-                                type="button"
+                                <GithubIcon className="w-5 h-5" />
+                            </a>
+                            <a
+                                href="https://twitter.com"
+                                className="text-gray-400 hover:text-white transition-colors"
+                                target="_blank"
+                                rel="noopener noreferrer"
                             >
-                                <FacebookIcon />
-                            </button>
-                            <button
-                                className="bg-white text-pink-400 shadow-lg font-normal h-10 w-10 flex items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
-                                type="button"
+                                <TwitterIcon className="w-5 h-5" />
+                            </a>
+                            <a
+                                href="mailto:contact@hstopdecks.com"
+                                className="text-gray-400 hover:text-white transition-colors"
                             >
-                                <DribbbleIcon />
-                            </button>
-                            <button
-                                className="bg-white text-blueGray-800 shadow-lg font-normal h-10 w-10 flex items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
-                                type="button"
-                            >
-                                <GithubIcon />
-                            </button>
+                                <MailIcon className="w-5 h-5" />
+                            </a>
                         </div>
                     </div>
-                    <div className="w-full lg:w-6/12 px-4">
-                        <div className="flex flex-wrap items-top mb-6">
-                            <div className="w-full lg:w-4/12 px-4 ml-auto">
-                                <span
-                                    className="block uppercase text-blue-500 text-sm font-semibold mb-2"
-                                >Useful Links</span>
-                                <ul className="list-unstyled">
-                                    <li>
-                                        <a
-                                            className="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
-                                            href="/"
-                                        >About Us</a>
-                                    </li>
-                                    <li>
-                                        <a
-                                            className="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
-                                            href="/"
-                                        >Blog</a>
-                                    </li>
-                                    <li>
-                                        <a
-                                            className="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
-                                            href="/"
-                                        >Github</a>
-                                    </li>
-                                    <li>
-                                        <a
-                                            className="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
-                                            href="/"
-                                        >Free Products</a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div className="w-full lg:w-4/12 px-4">
-                                <span
-                                    className="block uppercase text-blue-500 text-sm font-semibold mb-2"
-                                >Other Resources</span>
-                                <ul className="list-unstyled">
-                                    <li>
-                                        <a
-                                            className="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
-                                            href="/"
-                                        >MIT License</a>
-                                    </li>
-                                    <li>
-                                        <a
-                                            className="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
-                                            href="/"
-                                        >Terms &amp; Conditions</a>
-                                    </li>
-                                    <li>
-                                        <a
-                                            className="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
-                                            href="/"
-                                        >Privacy Policy</a>
-                                    </li>
-                                    <li>
-                                        <a
-                                            className="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
-                                            href="mailto:vicvinvinc@gmail.com"
-                                        >Contact Us</a>
-                                    </li>
-                                </ul>
-                            </div>
+
+                    {/* Platform Features */}
+                    <div>
+                        <h4 className="text-lg font-semibold mb-6 flex items-center">
+                            <Target className="w-5 h-5 mr-2 text-blue-400" />
+                            平台功能
+                        </h4>
+                        <ul className="space-y-3">
+                            <li>
+                                <Link href="/cards" className="text-gray-300 hover:text-white transition-colors flex items-center">
+                                    <Layers className="w-4 h-4 mr-2 text-gray-500" />
+                                    卡牌数据库
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="/decks" className="text-gray-300 hover:text-white transition-colors flex items-center">
+                                    <Sparkles className="w-4 h-4 mr-2 text-gray-500" />
+                                    卡组构建器
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="/discovery" className="text-gray-300 hover:text-white transition-colors flex items-center">
+                                    <Target className="w-4 h-4 mr-2 text-gray-500" />
+                                    发现实验室
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="/meta" className="text-gray-300 hover:text-white transition-colors flex items-center">
+                                    <BarChart3 className="w-4 h-4 mr-2 text-gray-500" />
+                                    元数据分析
+                                </Link>
+                            </li>
+                        </ul>
+                    </div>
+
+                    {/* Resources */}
+                    <div>
+                        <h4 className="text-lg font-semibold mb-6">资源中心</h4>
+                        <ul className="space-y-3">
+                            <li>
+                                <Link href="/news" className="text-gray-300 hover:text-white transition-colors">
+                                    最新资讯
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="/about" className="text-gray-300 hover:text-white transition-colors">
+                                    关于我们
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="/guides" className="text-gray-300 hover:text-white transition-colors">
+                                    新手指南
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="/community" className="text-gray-300 hover:text-white transition-colors">
+                                    社区讨论
+                                </Link>
+                            </li>
+                        </ul>
+                    </div>
+
+                    {/* Legal */}
+                    <div>
+                        <h4 className="text-lg font-semibold mb-6">法律信息</h4>
+                        <ul className="space-y-3">
+                            <li>
+                                <Link href="/terms" className="text-gray-300 hover:text-white transition-colors">
+                                    使用条款
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="/privacy" className="text-gray-300 hover:text-white transition-colors">
+                                    隐私政策
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="/cookies" className="text-gray-300 hover:text-white transition-colors">
+                                    Cookie政策
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="/disclaimer" className="text-gray-300 hover:text-white transition-colors">
+                                    免责声明
+                                </Link>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                {/* Bottom Section */}
+                <div className="border-t border-gray-700 mt-12 pt-8">
+                    <div className="flex flex-col md:flex-row justify-between items-center">
+                        <div className="text-gray-400 text-sm mb-4 md:mb-0">
+                            © 2024 HsTopDecks. 保留所有权利。
+                        </div>
+                        <div className="flex items-center text-gray-400 text-sm">
+                            <span>使用 </span>
+                            <Heart className="w-4 h-4 mx-1 text-red-500" />
+                            <span> 为炉石传说玩家精心打造</span>
+                        </div>
+                        <div className="text-gray-400 text-sm mt-4 md:mt-0">
+                            <span>本站内容与暴雪娱乐官方无关</span>
                         </div>
                     </div>
                 </div>
-                <hr className="my-6 border-blueGray-300" />
-                <div className="flex flex-wrap items-center md:justify-between justify-center">
-                    <div className="w-full md:w-4/12 px-4 mx-auto text-center">
-                        <div className="text-sm text-blueGray-500 font-semibold py-1">
-                            Copyright © 2024 Color-Stack By&nbsp;
-                            <a
-                                href="https://www.creative-tim.com?ref=nr-footer"
-                                className="text-blueGray-500 hover:text-blueGray-800"
-                            >VicJuice</a>.
-                        </div>
+
+                {/* Hearthstone Themed Decoration */}
+                <div className="mt-8 text-center">
+                    <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-full border border-blue-500/20">
+                        <Sparkles className="w-4 h-4 mr-2 text-blue-400" />
+                        <span className="text-sm text-gray-300">Powered by Hearthstone® API</span>
+                        <Sparkles className="w-4 h-4 ml-2 text-purple-400" />
                     </div>
                 </div>
             </div>

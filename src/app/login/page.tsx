@@ -2,6 +2,7 @@ import Link from "next/link";
 import { ChevronLeft } from 'lucide-react';
 import { ContentLayout } from "@/components/local/layout";
 import EmailSignIn from "./components/email-signin";
+import GoogleSignIn from "./components/google-signin";
 import Navigation from '@/components/local/navigation';
 
 export default function Page({
@@ -36,6 +37,17 @@ export default function Page({
                             登录账号 | Sign In
                         </h2>
                         <EmailSignIn />
+                        <div className="relative my-6">
+                            <div className="absolute inset-0 flex items-center">
+                                <span className="w-full border-t" />
+                            </div>
+                            <div className="relative flex justify-center text-xs uppercase">
+                                <span className="bg-background px-2 text-muted-foreground">
+                                    或继续使用
+                                </span>
+                            </div>
+                        </div>
+                        <GoogleSignIn />
                     </div>
                     {searchParams?.message && (
                         <p className="mt-4 px-4 py-2 bg-foreground/10

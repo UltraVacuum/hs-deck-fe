@@ -1,3 +1,4 @@
+import { headers } from "next/headers";
 import { redirect } from "next/navigation";
 import { createClient } from "@/supabase/server";
 import GoogleIcon from './google-icon';
@@ -8,12 +9,12 @@ export default function GoogleSignIn() {
     const signInWithGoogle = async (formData: FormData) => {
         "use server";
         const supabase = createClient();
-        const redirectUrl = process.env.NEXT_AUTH_REDIRECT_URL
+        const origin = headers().get("origin");
         const { data, error }: any = await supabase.
             auth.signInWithOAuth({
                 provider: 'google',
                 options: {
-                    redirectTo: redirectUrl,
+                    redirectTo: `${origin}/auth/callback`,
                 },
             })
         if (data) {
