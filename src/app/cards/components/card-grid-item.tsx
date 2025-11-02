@@ -147,7 +147,7 @@ export function CardGridItem({
           <CardImage
             cardId={id}
             cardName={name_zh}
-            imageUrl={imageUrls.large || imageUrls.orig}
+            imageUrl={imageUrls.large || imageUrls.orig || imageUrls.normal || ''}
             size="large"
             className="w-full h-full"
             showLoading={false}
