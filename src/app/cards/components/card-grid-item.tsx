@@ -27,6 +27,8 @@ interface CardGridItemProps {
     tile: string;
     orig?: string;
     render?: string;
+    renderLarge?: string;
+    large?: string;
     '256x'?: string;
     '512x'?: string;
   };
